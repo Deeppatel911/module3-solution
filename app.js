@@ -43,10 +43,10 @@
 				});
 			}
 		};	
-		menu.removeItem=function(itemIndex)
-		{
-			MenuSearchService.removeItem(itemIndex);
-		};
+		// menu.removeItem=function(itemIndex)
+		// {
+			// MenuSearchService.removeItem(itemIndex);
+		// };
     // //Implementaion for Filtering Items based on searchTerm
     // menu.getMatchedMenuItems = function () {
       // menu.found = []
@@ -62,12 +62,14 @@
     // };
 
     // // Implementaion for removing item at given index
-    // menu.removeItem = function (index) {
-      // menu.found.splice(index, 1);
-      // if (menu.found.length == 0) {
-        // menu.error = "Nothing found";
-      // }
-    // }
+		menu.removeItem = function (index)
+		{
+			menu.found.splice(index, 1);
+			if (menu.found.length == 0)
+			{
+				menu.error = "Nothing found";
+			}
+		}
 	};
 
 
@@ -96,10 +98,10 @@
 			return foundItems;
 			});
 		};
-		service.removeItem=function(itemIndex)
-		{
-			foundItems.splice(itemIndex,1);
-		};
+		// service.removeItem=function(itemIndex)
+		// {
+			// foundItems.splice(itemIndex,1);
+		// };
 	};
 
 })();
